@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" class="space-y-4">
+    <input name="name" placeholder="Merchant Name" class="w-full border p-2 rounded" required>
+    <select name="payment_method" class="w-full border p-2 rounded">
+        <option value="mobile">Mobile</option>
+        <option value="card">Card</option>
+        <option value="bank">Bank</option>
+    </select>
+    <input name="config" placeholder="Payment Config (e.g. phone number)" class="w-full border p-2 rounded">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save Settings</button>
+</form>
+{% endblock %}

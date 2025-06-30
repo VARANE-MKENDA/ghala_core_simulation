@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" class="space-y-4">
+    <select name="merchant" class="w-full border p-2 rounded">
+        {% for merchant in merchants %}
+        <option value="{{ merchant.id }}">{{ merchant.name }}</option>
+        {% endfor %}
+    </select>
+    <input name="product" placeholder="Product Name" class="w-full border p-2 rounded" required>
+    <input name="total" placeholder="Total Amount" type="number" step="0.01" class="w-full border p-2 rounded" required>
+    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Place Order</button>
+</form>
+{% endblock %}
